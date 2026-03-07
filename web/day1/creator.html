@@ -1,0 +1,83 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InviteVerse 仪式感生成器 - 创建邀请</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="creator-page" data-page="creator">
+  <canvas id="starfield-canvas" aria-hidden="true"></canvas>
+
+  <div class="creator-shell">
+    <header class="creator-header fade-up">
+      <p class="eyebrow">Day 1 产品骨架</p>
+      <h1>InviteVerse 仪式感生成器</h1>
+      <p class="subhead">输入一句话，生成可分享的沉浸式动态邀请函</p>
+    </header>
+
+    <main class="glass-card creator-card fade-up delay-1">
+      <form id="creator-form" class="creator-form">
+        <label class="field">
+          <span>一句话描述</span>
+          <textarea
+            id="prompt-input"
+            name="prompt"
+            rows="3"
+            placeholder="例如：下周六晚 7 点，外滩生日晚宴，海洋风，想高级一点"
+          ></textarea>
+        </label>
+
+        <div class="field-grid">
+          <label class="field">
+            <span>活动名称</span>
+            <input type="text" name="event_name" placeholder="星河之夜年度盛典">
+          </label>
+          <label class="field">
+            <span>活动时间</span>
+            <input type="datetime-local" name="event_time">
+          </label>
+          <label class="field">
+            <span>活动地点</span>
+            <input type="text" name="event_location" placeholder="星际大酒店 宇宙宴会厅">
+          </label>
+          <label class="field">
+            <span>着装要求</span>
+            <input type="text" name="dress_code" placeholder="正装 / 晚礼服（可选）">
+          </label>
+        </div>
+
+        <label class="field">
+          <span>上传照片（可选）</span>
+          <input type="file" name="photo" accept="image/*">
+        </label>
+
+        <fieldset class="style-group">
+          <legend>风格偏好</legend>
+          <label class="style-chip">
+            <input type="radio" name="style" value="dream" checked>
+            <span>梦幻优雅</span>
+          </label>
+          <label class="style-chip">
+            <input type="radio" name="style" value="movie">
+            <span>电影高级</span>
+          </label>
+          <label class="style-chip">
+            <input type="radio" name="style" value="warm">
+            <span>温馨浪漫</span>
+          </label>
+        </fieldset>
+
+        <div class="actions">
+          <button id="auto-fill-btn" type="button" class="btn btn-secondary">自动填充示例</button>
+          <button type="submit" class="btn btn-primary">生成邀请函</button>
+        </div>
+
+        <p class="hint">当前为 Day 1 骨架：暂不解析输入内容，点击后会进入固定的「星河之夜」展示模板。</p>
+      </form>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
