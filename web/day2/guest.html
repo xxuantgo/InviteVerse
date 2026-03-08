@@ -1,0 +1,101 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InviteVerse - 动态邀请函</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="guest-page" data-page="guest">
+  <canvas id="starfield-canvas" aria-hidden="true"></canvas>
+
+  <div id="ignite-overlay" class="ignite-overlay">
+    <div class="ignite-panel glass-card">
+      <p id="overlay-eyebrow" class="eyebrow">年度盛典</p>
+      <h2>按住 1 秒 点亮邀请</h2>
+      <button id="ignite-button" type="button" class="btn btn-primary">按住点亮星河</button>
+      <p class="overlay-note">这一步用于营造沉浸式开场仪式感</p>
+    </div>
+  </div>
+
+  <main id="guest-main" class="guest-main">
+    <section class="section hero">
+      <div class="hero-content">
+        <p id="hero-tagline" class="hero-kicker fade-up">ANNUAL GALA 2026</p>
+        <h1 id="hero-title" class="hero-title fade-up delay-1">星河之夜</h1>
+        <p id="hero-subtitle" class="hero-subtitle fade-up delay-2">年度盛典</p>
+        <p class="hero-tip fade-up delay-3">向下滑动</p>
+      </div>
+    </section>
+
+    <section class="section reveal-on-scroll">
+      <article class="glass-card info-card">
+        <div class="info-item">
+          <div class="icon-ring">时</div>
+          <div>
+            <h3>盛典时间</h3>
+            <p id="event-datetime" class="major">2026年1月15日 18:30</p>
+            <p id="event-checkin" class="minor">18:00 开始签到入场</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-ring">地</div>
+          <div>
+            <h3>盛典地点</h3>
+            <p id="event-venue" class="major">星际大酒店·宇宙宴会厅</p>
+            <p id="event-address" class="minor">上海市浦东新区星河路88号</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-ring">装</div>
+          <div>
+            <h3>着装要求</h3>
+            <p id="event-dress" class="major">正装 / 晚礼服（可选）</p>
+            <p class="minor">建议包含金色或星空元素</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-ring">联</div>
+          <div>
+            <h3>主办方联系</h3>
+            <p id="event-contact" class="major">星河之夜筹备组</p>
+            <p class="minor">如需协助，请联系主办方</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section reveal-on-scroll">
+      <article class="glass-card letter-card">
+        <h2 id="invitation-title">诚挚邀请</h2>
+        <p>尊敬的嘉宾：</p>
+        <div id="invitation-body"></div>
+      </article>
+    </section>
+
+    <section class="section reveal-on-scroll">
+      <article class="glass-card action-card">
+        <h2>来宾回执</h2>
+        <p class="minor">Day2：页面内容已由 InvitationSpec 驱动渲染</p>
+        <div id="rsvp-actions" class="rsvp-actions">
+          <button id="cta-confirm-btn" type="button" class="btn btn-primary" data-rsvp="confirm">确认出席</button>
+          <button type="button" class="btn btn-secondary" data-rsvp="pending">待定</button>
+          <button type="button" class="btn btn-secondary" data-rsvp="decline">婉拒</button>
+        </div>
+        <p id="rsvp-status" class="status-text">当前状态：未回复</p>
+
+        <div class="utility-actions">
+          <button id="calendar-btn" type="button" class="btn btn-ghost">加入日历</button>
+          <button id="map-btn" type="button" class="btn btn-ghost">地图导航</button>
+          <button id="share-btn" type="button" class="btn btn-ghost">分享邀请</button>
+          <button id="contact-btn" type="button" class="btn btn-ghost">联系主办方</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

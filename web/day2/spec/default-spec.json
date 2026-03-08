@@ -1,0 +1,64 @@
+﻿{
+  "version": "1.1",
+  "template": {
+    "id": "galaxy_v1"
+  },
+  "event": {
+    "title": "星河之夜",
+    "subtitle": "年度盛典",
+    "datetime": "2026-01-15 18:30",
+    "timezone": "北京时间",
+    "checkinTime": "18:00",
+    "venue": "星际大酒店·宇宙宴会厅",
+    "address": "上海市浦东新区星河路88号",
+    "dressCode": "正装 / 晚礼服（Black Tie Optional）",
+    "contact": "星河之夜筹备组"
+  },
+  "copy": {
+    "locale": "zh-CN",
+    "heroTagline": "ANNUAL GALA 2026",
+    "invitationTitle": "诚挚邀请",
+    "body": [
+      "星光不问赶路人，时光不负有心人。在过去的一年里，我们携手并肩，共同创造了璀璨的星河。",
+      "值此辞旧迎新之际，我们诚挚地邀请您出席“星河之夜”年度盛典。让我们在星光下重聚，共赏繁星，同谱华章。"
+    ],
+    "ctaText": "确认出席"
+  },
+  "style": {
+    "mood": ["梦幻", "优雅", "高级感", "电影感"],
+    "keywords": ["星河", "午夜蓝", "香槟金", "玻璃拟态"]
+  },
+  "tokens": {
+    "colors": {
+      "bg1": "#0f172a",
+      "bg2": "#1e1b4b",
+      "gold": "#FCD34D",
+      "text": "#F8FAFC"
+    },
+    "glass": {
+      "opacity": 0.1,
+      "blurPx": 22,
+      "borderGlow": 0.35
+    },
+    "motion": {
+      "pace": "slow",
+      "fadeUpDistancePx": 16,
+      "staggerMs": 120
+    },
+    "particles": {
+      "density": 0.65,
+      "speed": 0.35,
+      "twinkle": 0.6
+    }
+  },
+  "media": {
+    "bgmUrl": null
+  },
+  "actions": {
+    "rsvpEnabled": true,
+    "calendarEnabled": true,
+    "mapEnabled": true,
+    "shareEnabled": true
+  },
+  "warnings": []
+}

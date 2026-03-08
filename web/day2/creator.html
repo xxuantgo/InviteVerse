@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InviteVerse 仪式感生成器 - Day2 创建邀请</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="creator-page" data-page="creator">
+  <canvas id="starfield-canvas" aria-hidden="true"></canvas>
+
+  <div class="creator-shell">
+    <header class="creator-header fade-up">
+      <p class="eyebrow">Day 2 Spec 驱动原型</p>
+      <h1>InviteVerse 仪式感生成器</h1>
+      <p class="subhead">先写一句话，再补充基础信息与可选素材，生成 InvitationSpec 并渲染邀请函</p>
+    </header>
+
+    <main class="glass-card creator-card fade-up delay-1">
+      <form id="creator-form" class="creator-form">
+        <label class="field field-wide">
+          <span>一句话描述</span>
+          <textarea
+            id="prompt-input"
+            name="prompt"
+            rows="3"
+            placeholder="例如：下周六晚 7 点，年度晚宴，想要梦幻、优雅、带电影感"
+          ></textarea>
+        </label>
+
+        <div class="attachment-grid">
+          <label class="field">
+            <span>可附加描述文件（可选）</span>
+            <input type="file" name="desc_file" accept=".txt,.md,.doc,.docx,.pdf">
+          </label>
+          <label class="field">
+            <span>可附加照片（可选）</span>
+            <input type="file" name="photo_file" accept="image/*">
+          </label>
+        </div>
+
+        <div class="field-grid">
+          <label class="field">
+            <span>活动名称</span>
+            <input type="text" name="event_name" placeholder="星河之夜年度盛典" required>
+          </label>
+          <label class="field">
+            <span>活动时间（北京时间）</span>
+            <input type="datetime-local" name="event_time" required>
+          </label>
+          <label class="field">
+            <span>活动地址（含场馆名）</span>
+            <input type="text" name="event_address" placeholder="上海浦东喜来登由由大酒店 (浦东新区浦建路38号)" required>
+          </label>
+          <label class="field">
+            <span>主办方联系人（展示在来宾页）</span>
+            <input type="text" name="event_contact" placeholder="星河之夜筹备组" required>
+          </label>
+        </div>
+
+        <details class="advanced-panel">
+          <summary>更多细节（可选）</summary>
+          <div class="advanced-grid">
+            <label class="field">
+              <span>着装要求（可选）</span>
+              <input type="text" name="dress_code" placeholder="正装 / 晚礼服（Black Tie Optional）">
+            </label>
+          </div>
+        </details>
+
+        <div class="actions">
+          <button id="auto-fill-btn" type="button" class="btn btn-secondary">自动填充示例</button>
+          <button type="submit" class="btn btn-primary">生成邀请函</button>
+          <a href="./demo1_anniversary.html" class="btn btn-ghost" target="_blank" rel="noopener">预览 Demo1（一周年）</a>
+        </div>
+
+        <p class="hint">Day2 行为：先尝试调用 <code>/api/spec/generate</code>，若不可用则本地规则生成 Spec；随后跳转到 Guest 渲染。</p>
+      </form>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

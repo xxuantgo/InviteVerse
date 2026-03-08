@@ -1,81 +1,61 @@
 ﻿# InviteVerse
 
-InviteVerse 是一个面向 Hackathon 的「仪式感生成器」项目。
+InviteVerse 是一个面向 Hackathon 的「仪式感生成器」项目（Web 形态优先）。
 
-## Day 1 目标
+## 当前阶段
 
-完成产品骨架：
-
-- Creator 页：一句话输入 + 基本信息 + 风格选择
-- Guest 页：固定星河模板展示 + 分幕滚动 + RSVP（假数据）
+- `web/day1`：Day1 冻结快照（可直接演示）
+- `web/day2`：Day2 起持续迭代工作区（Day3 在此继续开发）
 
 ## 项目结构
 
 ```text
 InviteVerse/
 ├── docs/
-│   └── day1_inviteverse_产品骨架记录.md
+│   ├── day1_产品骨架记录.md
+│   └── day2_实现记录.md
 ├── web/
-│   └── day1/
+│   ├── day1/
+│   │   ├── index.html
+│   │   ├── creator.html
+│   │   ├── guest.html
+│   │   ├── styles.css
+│   │   └── app.js
+│   └── day2/
 │       ├── index.html
 │       ├── creator.html
 │       ├── guest.html
 │       ├── styles.css
-│       └── app.js
+│       ├── app.js
+│       └── spec/
+│           └── default-spec.json
 ├── .gitignore
 └── README.md
 ```
 
 ## 本地运行
 
-不需要 Anaconda，也不需要深度学习环境。这个 Day1 原型是纯前端静态页面（HTML/CSS/原生 JavaScript）。
+不需要 Anaconda。当前是纯前端静态页面（HTML/CSS/原生 JavaScript）。
 
-### 方式 A：直接打开（最简单）
-
-1. 在资源管理器双击 `web/day1/creator.html`
-2. 页面可浏览和交互
-
-说明：大多数功能可用，但推荐使用本地静态服务器获得更稳定体验。
-
-### 方式 B：Python 本地静态服务器（推荐）
-
-1. 打开 PowerShell
-2. 执行：
+### 运行 Day1
 
 ```powershell
 cd E:\InviteVerse
-python --version
-python -m http.server 5173 # 启动本地静态服务器, 监听端口 5173
+python -m http.server 5173
 ```
 
-3. 浏览器打开：
+打开：`http://localhost:5173/web/day1/`
 
-```text
-http://localhost:5173/web/day1/
-```
+### 运行 Day2
 
-4. 结束服务：在 PowerShell 按 `Ctrl + C`
+同一个服务即可，直接访问：
 
-如果 `python` 命令不可用，可尝试：
+`http://localhost:5173/web/day2/`
 
-```powershell
-py -m http.server 5173
-```
+停止服务：终端按 `Ctrl + C`
 
-### 方式 C：Node 静态服务（可选）
+## 开发约定
 
-仅在你本机已有 Node.js 时使用：
-
-```powershell
-cd E:\InviteVerse
-npx serve .
-```
-
-然后打开命令行输出的本地地址。
-
-## Day 2 开发方向
-
-1. 定义 InvitationSpec JSON 协议
-2. 将 Guest 页改为配置驱动渲染
-3. 接入最小 Planner Agent（字段抽取与缺失补全）
-4. 新增第 2 套模板验证泛化能力
+- Day1 保持冻结，禁止改动
+- Day2 为持续迭代主线（已支持 Spec 驱动渲染）
+- 数据结构与 `LLM -> Spec` 规范请查看：`docs/day2_实现记录.md`

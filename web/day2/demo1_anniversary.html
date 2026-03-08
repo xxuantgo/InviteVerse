@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InviteVerse Demo1 - 情侣一周年纪念</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./demo1.css">
+</head>
+<body>
+  <div class="demo1-root" id="demo1-root">
+    <div class="bg-gradient" aria-hidden="true"></div>
+    <div class="bg-blur" aria-hidden="true"></div>
+    <div class="bg-grain" aria-hidden="true"></div>
+    <div class="pointer-glow" id="pointer-glow" aria-hidden="true"></div>
+
+    <div class="petal-layer" aria-hidden="true">
+      <span class="petal petal-a"></span>
+      <span class="petal petal-b"></span>
+      <span class="petal petal-c"></span>
+      <span class="petal petal-d"></span>
+    </div>
+
+    <main class="hero-stage">
+      <p class="hero-eyebrow">InviteVerse First Anniversary Letter</p>
+
+      <section class="envelope-shell" aria-label="情侣一周年邀请卡片">
+        <article class="envelope-card">
+          <p class="seal-line">USTC · East Campus · 2024</p>
+          <div class="envelope-content">
+            <h1>一周年纪念</h1>
+            <p class="lead">365个日夜，依然想把第一眼的心动，郑重再说一遍。</p>
+            <p class="message">
+              这个周末，我们就在中国科大东区。沿着通往图书馆的梧桐路慢慢走，
+              把从 2024 年 9 月开始的心动，庆祝成第一年。
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <div id="swipe-hint" class="swipe-hint" aria-hidden="true">
+        <span>向上滑动，解锁我们的故事</span>
+        <span class="arrow"></span>
+      </div>
+    </main>
+
+    <section id="detail-section" class="detail-section reveal-block" aria-label="一周年赴约信息">
+      <article class="detail-card">
+        <p class="chip">invitation unlocked</p>
+        <h2>一周年约定</h2>
+
+        <div class="detail-grid">
+          <div class="detail-item">
+            <p>时间</p>
+            <strong>2026年3月15日 周日 18:30</strong>
+          </div>
+          <div class="detail-item">
+            <p>地点</p>
+            <strong>中国科大东区旁 · 梧桐巷小餐馆</strong>
+          </div>
+          <div class="detail-item">
+            <p>备注</p>
+            <strong>只有我们两个人的一周年晚餐。</strong>
+          </div>
+        </div>
+
+        <button id="replay-btn" class="replay-btn" type="button">回到信封</button>
+      </article>
+    </section>
+
+    <section id="story-section" class="story-section reveal-block" aria-label="中国科大校园恋爱故事">
+      <article class="story-card">
+        <p class="chip">our story at USTC</p>
+        <h2>从大一开始的宿命感</h2>
+        <p class="story-paragraph">
+          2024 年秋天，新生第一周。你在中国科大东区三教门口抱着《高等数学》，
+          我在找教室时走错了楼层。我们几乎同时低头看课表，又同时抬头说了句“你也是 2 班吗？”
+          那天的风很轻，梧桐叶落在你肩上，我伸手帮你拿掉，像电影里的第一帧。
+        </p>
+        <p class="story-paragraph">
+          从 2024 年 9 月相识，到 2025 年 3 月 15 日确定关系，我们把很多普通日子过成了高光时刻：
+          在图书馆闭馆前的最后十分钟互改作业，在西区操场抬头看同一片夜空，在期末最难熬的凌晨并肩走回宿舍。
+          你说“我们不是偶然”，我答“那就把这份注定认真到底”。
+        </p>
+
+        <div class="moment-list">
+          <article class="moment-item">
+            <p class="moment-date">2024 · 09 · 东区三教</p>
+            <h3>同一份课表，同一节高数课</h3>
+            <p>第一次并肩走进教室，恰好坐在同一排靠窗位置，连草稿纸页码都一样。</p>
+          </article>
+          <article class="moment-item">
+            <p class="moment-date">2025 · 03 · 东区图书馆外</p>
+            <h3>3月15日，我们确定关系</h3>
+            <p>那天晚自习后，你说“那就从今天开始吧”，我点头，风也刚好停了。</p>
+          </article>
+          <article class="moment-item">
+            <p class="moment-date">2026 · 03 · 一周年</p>
+            <h3>还在校园里，一起走到第二年</h3>
+            <p>我们还没有毕业，但已经学会把每个平凡日子过得像纪念日。</p>
+          </article>
+        </div>
+      </article>
+    </section>
+
+    <section class="closing-section reveal-block" aria-label="邀请确认">
+      <article class="closing-card">
+        <p class="closing-quote">“如果重来一次，我还是会在科大的梧桐影里，一眼认出你。”</p>
+        <p class="closing-note">3月15日，东区见。一周年晚餐，不见不散。</p>
+        <button id="join-btn" class="join-btn" type="button">确认赴约</button>
+      </article>
+    </section>
+  </div>
+
+  <div id="demo1-toast" class="demo1-toast" role="status" aria-live="polite"></div>
+
+  <script src="./demo1.js"></script>
+</body>
+</html>

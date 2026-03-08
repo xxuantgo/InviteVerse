@@ -2,3 +2,7 @@
 Thumbs.db
 *.log
 .vscode/
+
+.env
+.env.local
+!.env.example
