@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InviteVerse Demo2 - 赛博朋克 2077 风格 20 岁游艇生日派对</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./demo2.css">
+</head>
+<body>
+  <div class="cyber-root" id="cyber-root">
+    <div class="scene-grid" aria-hidden="true"></div>
+    <div class="scene-scanline" aria-hidden="true"></div>
+    <div class="scene-vignette" aria-hidden="true"></div>
+    <div class="scene-noise" aria-hidden="true"></div>
+
+    <main class="cyber-stage">
+      <section class="panel reveal-panel" aria-label="顶部状态栏">
+        <p class="panel-tag">[SYS_UPDATE] CYBER BIRTHDAY PARTY</p>
+      </section>
+
+      <section class="title-zone reveal-panel" aria-label="核心标题区">
+        <h1 class="glitch-title" data-text="CYBER BIRTHDAY PARTY">CYBER BIRTHDAY PARTY</h1>
+        <p class="subtitle">>_ 协议覆盖：[Lucas] 迎来了他的 20 岁生日。</p>
+      </section>
+
+      <section class="panel reveal-panel" aria-label="任务详情卡片">
+        <p class="panel-tag">MISSION INTEL</p>
+
+        <div class="split-grid">
+          <article class="story-block">
+            <h2>主理人设定</h2>
+            <p>
+              我是Lucas, 5 月 31 日是我 20 岁生日。想邀请我的朋友们一起登上外滩游艇,
+              把这一晚过成真正的赛博生日局!
+            </p>
+          </article>
+          <article class="story-block">
+            <h2>主题动机</h2>
+            <p>
+              我和朋友们都被《赛博朋克2077》深深吸引。我们偏爱的就是“高科技与低生活”并存的冲突美学：
+              霓虹、工业、噪声、夜景，和年轻人的荷尔蒙。
+            </p>
+          </article>
+        </div>
+
+        <div class="panel-grid panel-grid-6">
+          <article class="info-block">
+            <h2>目标 TARGET</h2>
+            <p>20岁生日派对</p>
+          </article>
+          <article class="info-block">
+            <h2>时间 TIME_SYNC</h2>
+            <p id="time-sync-text">2026.05.31 // 19:00:00 :: --:--:--.---</p>
+          </article>
+          <article class="info-block">
+            <h2>坐标 COORD</h2>
+            <p>上海外滩码头 登陆游艇</p>
+          </article>
+          <article class="info-block">
+            <h2>登船 BOARDING</h2>
+            <p>18:30 码头集合，过时错过启航窗口</p>
+          </article>
+          <article class="info-block">
+            <h2>装备要求 DRESS_CODE</h2>
+            <p>赛博穿搭，怎么炫酷怎么来</p>
+          </article>
+          <article class="info-block">
+            <h2>倒计时 COUNTDOWN</h2>
+            <p id="countdown-text">SYNCING...</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-zone reveal-panel" aria-label="接受邀请">
+        <button id="join-btn" class="join-btn" type="button">[ 接入网络 // JACK IN ]</button>
+        <button id="decline-btn" class="decline-btn" type="button">[ 拒绝协议 // DECLINE ]</button>
+        <p class="cta-note">BOARDING AT 18:30 // 2026.05.31 // BUND PIER</p>
+      </section>
+    </main>
+  </div>
+
+  <div id="cyber-toast" class="cyber-toast" role="status" aria-live="polite"></div>
+
+  <script src="./demo2.js"></script>
+</body>
+</html>
