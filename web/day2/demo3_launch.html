@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InviteVerse Demo3 - 产品发布现场</title>
+  <link rel="stylesheet" href="./demo3.css">
+</head>
+<body>
+  <div id="auth-flash" class="auth-flash" aria-hidden="true"></div>
+  <canvas id="wireframe-canvas" class="wireframe-canvas" aria-hidden="true"></canvas>
+  <div class="scene-grid" aria-hidden="true"></div>
+  <div class="scene-scanlines" aria-hidden="true"></div>
+  <div class="scene-vignette" aria-hidden="true"></div>
+
+  <main class="launch-shell">
+    <header class="status-bar reveal-block" aria-label="系统状态栏">
+      <p class="status-pill">INVITEVERSE // PRODUCT LAUNCH</p>
+      <p class="status-meta">TERMINAL ACCESS :: 2026-03-15 :: CST +08:00</p>
+    </header>
+
+    <section class="terminal-panel reveal-block" aria-label="终端邀请函主体">
+      <div class="terminal-topbar">
+        <div class="terminal-lights" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="terminal-title">root@inviteverse:~/launch/roadshow</p>
+      </div>
+
+      <div class="terminal-body">
+        <div id="typewriter-lines" class="typewriter-lines"></div>
+        <div id="typing-cursor" class="typing-cursor" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="unlock-panel" class="unlock-panel reveal-block" aria-label="命令行解锁区域">
+      <p class="unlock-label">AUTH REQUIRED // TYPE JOIN AND PRESS ENTER</p>
+      <form id="command-form" class="command-form" autocomplete="off">
+        <label class="command-shell" for="command-input">
+          <span class="command-prefix">[ root@inviteverse ]$</span>
+          <input
+            id="command-input"
+            class="command-input"
+            type="text"
+            name="command"
+            inputmode="latin"
+            autocapitalize="characters"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="JOIN"
+            disabled
+          >
+        </label>
+      </form>
+      <p id="command-hint" class="command-hint">系统初始化中，命令输入区将在日志打印完成后开放。</p>
+    </section>
+
+    <section id="access-result" class="access-result" aria-label="邀请码矩阵">
+      <div class="result-copy">
+        <p class="result-tag">ACCESS GRANTED</p>
+        <h2>InviteVerse 首发路演邀请已授权</h2>
+        <p class="result-text">2026 年 3 月 15 日，InviteVerse 产品首发路演。评委席、演示区与体验入口已就绪，准时接入。</p>
+        <p class="result-code">INVITE CODE :: IV-LAUNCH-0315</p>
+      </div>
+
+      <div class="qr-panel">
+        <div id="qr-matrix" class="qr-matrix" role="img" aria-label="InviteVerse 路演邀请码二维矩阵"></div>
+        <p class="qr-caption">SCAN VISUALLY // ACCESS TOKEN READY</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./demo3.js"></script>
+</body>
+</html>
